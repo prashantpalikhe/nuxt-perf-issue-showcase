@@ -6,7 +6,7 @@ export const options = {
 };
 
 export default function () {
-  http.get("http://localhost:3000/bad");
+  http.get("http://localhost:3000/good");
 
   sleep(1);
 }
