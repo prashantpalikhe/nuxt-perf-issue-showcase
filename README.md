@@ -1,13 +1,13 @@
 ## Prerequisites
 
-1. Download K6
+1. Download K6 (`brew install k6`)
 2. Run Nuxt `yarn build && node .output/server/index.js`
-3. Run K6 `k6 run load-test.js` for good page
+3. Run K6 `k6 run load-test.js` for good page `/good`
 4. Update `load-test.js` to test `/bad` and run `k6 run load-test.js` again
 
 ## What happens
 
-The only difference between the good and bad page is the good page uses div in the for loop. And, the bad page uses NuxtClientFallback.
+The only difference between the good and bad page is the good page uses a `div` in the for loop. And, the bad page uses `NuxtClientFallback`.
 
 When running the load test where within a minute, we ramp up to 300 concurrent user, the good page responds consistently fast.
 
